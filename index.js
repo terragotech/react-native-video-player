@@ -370,7 +370,9 @@ export default class VideoPlayer extends Component {
             />
           </TouchableOpacity>
         )}
-        {(Platform.OS === 'android') ? null : (
+        {/*
+        see https://github.com/react-native-community/react-native-video/issues/462
+        (Platform.OS === 'android') ? null : (
           <TouchableOpacity onPress={this.onToggleFullScreen} style={customStyles.controlButton}>
             <Icon
               style={[styles.extraControl, customStyles.controlIcon]}
@@ -378,7 +380,7 @@ export default class VideoPlayer extends Component {
               size={32}
             />
           </TouchableOpacity>
-        )}
+        )*/}
       </View>
     );
   }
